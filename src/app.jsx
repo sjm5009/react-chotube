@@ -4,8 +4,10 @@ import "./app.css";
 import VideoList from "./components/video_list";
 
 function App() {
+  /* State 설정 */
   const [videos, setVideos] = useState([]);
 
+  /* useEffect : mount update 시에 실행 */
   useEffect(() => {
     const requestOptions = {
       method: "GET",
@@ -22,7 +24,6 @@ function App() {
   });
 
   return <VideoList videos={videos}></VideoList>;
-  /* return <h1>hello</h1>; */
 }
 
 export default App;
