@@ -27,3 +27,6 @@ yarn-error.log*
 
 # test json data
 jsonData
+
+# APIs keys
+.env
