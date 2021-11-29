@@ -5,12 +5,10 @@ import styles from "./video_item.module.css";
 // 방법3
 const VideoItem = memo(
   ({ video, video: { snippet }, onVideoClick, display }) => {
-    const displayType = display === "list" ? styles.list : styles.grid;
+    const displayType =
+      display === "list" ? styles.container_list : styles.container_grid;
     return (
-      <li
-        className={`${styles.container} ${displayType}`}
-        onClick={() => onVideoClick(video)}
-      >
+      <li className={`${displayType}`} onClick={() => onVideoClick(video)}>
         <div className={styles.video}>
           <img
             className={styles.thumbnail}
