@@ -10,7 +10,6 @@ function App() {
   const [videos, setVideos] = useState([]);
 
   const search = (searchWord) => {
-    console.log(searchWord);
     var requestOptions = {
       method: "GET",
       redirect: "follow",

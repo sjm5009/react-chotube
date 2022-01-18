@@ -27,7 +27,6 @@ function App({ chotube }) {
   );
 
   useEffect(() => {
-    console.log("mostPopular");
     chotube
       .mostPopular() //
       .then((result) => setVideos(result.items));

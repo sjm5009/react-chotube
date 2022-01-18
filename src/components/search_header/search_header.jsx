@@ -3,16 +3,18 @@ import styles from "./search_header.module.css";
 
 const SearchHeader = memo((props) => {
   const inputRef = useRef();
+
   const keypress = (event) => {
     const charCode = event.charCode;
     if (charCode === 13) {
       props.onSearch(inputRef.current.value);
     }
   };
+
   const click = () => {
     props.onSearch(inputRef.current.value);
   };
-  console.log("header");
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
